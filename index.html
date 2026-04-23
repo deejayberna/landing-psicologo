@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Psicóloga profesional. Acompañamiento terapéutico individual, de pareja y familiar. Agenda tu primera consulta hoy." />
+  <meta name="keywords" content="psicólogo, terapia psicológica, consulta psicológica, salud mental, bienestar" />
+  <title>Dra. Ana Sofía Méndez — Psicóloga Clínica</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy:   { DEFAULT: '#1b2d4f', dark: '#0f1e36', light: '#2c4470' },
+            cream:  { DEFAULT: '#f8f4ee', dark: '#ede8df' },
+            accent: { DEFAULT: '#4a7fa5', hover: '#3a6a8e' },
+          },
+          fontFamily: {
+            serif: ['"Playfair Display"', 'Georgia', 'serif'],
+            sans:  ['Lato', 'sans-serif'],
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body class="font-sans antialiased">
+
+  <!-- ===================== NAVBAR ===================== -->
+  <nav id="navbar" class="fixed top-0 left-0 right-0 z-50">
+    <div class="max-w-6xl mx-auto px-5 flex items-center justify-between h-16">
+
+      <!-- Logo -->
+      <a href="#hero" class="flex items-center gap-2 text-white font-serif text-lg tracking-wide">
+        <svg class="w-7 h-7 text-accent" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 15v-4H7l5-8v4h4l-5 8z"/>
+        </svg>
+        <span>Ana Sofía Méndez</span>
+      </a>
+
+      <!-- Desktop nav links -->
+      <ul class="hidden md:flex items-center gap-8">
+        <li><a href="#empatia"  class="nav-link">Inicio</a></li>
+        <li><a href="#sobre-mi" class="nav-link">Sobre mí</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#contacto" class="nav-link">Contacto</a></li>
+      </ul>
+
+      <!-- CTA desktop -->
+      <a href="https://wa.me/5215500000000?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+         target="_blank" rel="noopener noreferrer"
+         class="hidden md:inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-sm font-bold px-5 py-2 rounded-full transition-all duration-200"
+         aria-label="Agendar cita por WhatsApp">
+        <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.135 1.535 5.88L0 24l6.273-1.505A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.032-1.387l-.36-.215-3.727.895.938-3.625-.235-.372A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+        </svg>
+        Agendar cita
+      </a>
+
+      <!-- Hamburger button (mobile) -->
+      <button id="menu-toggle" class="md:hidden text-white focus:outline-none" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobile-menu">
+        <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+        </svg>
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="md:hidden hidden" role="navigation" aria-label="Menú móvil">
+      <ul class="flex flex-col px-5 pb-5 pt-2 gap-4">
+        <li><a href="#empatia"   class="nav-link block" onclick="closeMobileMenu()">Inicio</a></li>
+        <li><a href="#sobre-mi"  class="nav-link block" onclick="closeMobileMenu()">Sobre mí</a></li>
+        <li><a href="#servicios" class="nav-link block" onclick="closeMobileMenu()">Servicios</a></li>
+        <li><a href="#contacto"  class="nav-link block" onclick="closeMobileMenu()">Contacto</a></li>
+        <li>
+          <a href="https://wa.me/5215500000000?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+             target="_blank" rel="noopener noreferrer"
+             class="btn-whatsapp text-sm mt-1"
+             onclick="closeMobileMenu()">
+            <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.135 1.535 5.88L0 24l6.273-1.505A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.032-1.387l-.36-.215-3.727.895.938-3.625-.235-.372A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+            </svg>
+            Agendar cita
+          </a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ===================== HERO ===================== -->
+  <section id="hero" class="flex items-center justify-center px-5 pt-16">
+    <div class="max-w-6xl w-full mx-auto grid md:grid-cols-2 gap-12 items-center min-h-screen py-20">
+
+      <!-- Text -->
+      <div class="text-white order-2 md:order-1 text-center md:text-left">
+        <span class="inline-block bg-accent bg-opacity-20 text-blue-200 text-xs font-bold uppercase tracking-widest px-4 py-1.5 rounded-full mb-6 fade-in-up">
+          Psicología Clínica &amp; Terapéutica
+        </span>
+
+        <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl leading-tight mb-5 fade-in-up delay-100">
+          Un espacio seguro para<br class="hidden sm:block" />
+          <em class="not-italic text-blue-300">sanar y crecer</em>
+        </h1>
+
+        <p class="text-blue-100 text-lg leading-relaxed mb-8 max-w-lg mx-auto md:mx-0 fade-in-up delay-200">
+          Acompaño a personas y familias en su proceso de bienestar emocional con un enfoque humanista, cálido y basado en evidencia.
+        </p>
+
+        <div class="flex flex-wrap gap-4 justify-center md:justify-start fade-in-up delay-300">
+          <a href="https://wa.me/5215500000000?text=Hola%2C%20me%20gustar%C3%ADa%20agendar%20una%20cita"
+             target="_blank" rel="noopener noreferrer"
+             class="btn-whatsapp"
+             aria-label="Agendar primera consulta por WhatsApp">
+            <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+              <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.135 1.535 5.88L0 24l6.273-1.505A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.032-1.387l-.36-.215-3.727.895.938-3.625-.235-.372A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+            </svg>
+            Primera consulta gratuita
+          </a>
+
+          <a href="#sobre-mi" class="btn-primary" aria-label="Conocer más sobre la psicóloga">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+            </svg>
+            Conóceme
+          </a>
+        </div>
+
+        <!-- Trust indicators -->
+        <div class="mt-10 flex flex-wrap gap-6 justify-center md:justify-start text-blue-200 text-sm fade-in-up delay-400">
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Cédula profesional verificada
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            +8 años de experiencia
+          </span>
+          <span class="flex items-center gap-2">
+            <svg class="w-5 h-5 text-green-400" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+              <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+            </svg>
+            Sesiones en línea y presencial
+          </span>
+        </div>
+      </div>
+
+      <!-- Photo Placeholder -->
+      <div class="order-1 md:order-2 flex justify-center fade-in-up">
+        <div class="hero-photo-placeholder rounded-3xl w-64 h-80 sm:w-72 sm:h-96 flex flex-col items-center justify-center gap-4 shadow-2xl" role="img" aria-label="Foto de la psicóloga">
+          <svg class="w-20 h-20 text-white opacity-60" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+          </svg>
+          <span class="text-white text-opacity-70 text-sm font-sans">Tu foto aquí</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave divider -->
+  <div class="wave-divider" style="background:#1b2d4f;" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#1b2d4f"/>
+      <!-- inverted: fill matches next section color -->
+      <path d="M0,40 C360,80 1080,0 1440,40 L1440,60 L0,60 Z" fill="#f8f4ee" opacity="0"/>
+    </svg>
+  </div>
+
+  <!-- ===================== EMPATHY ===================== -->
+  <section id="empatia" aria-labelledby="empatia-heading">
+    <div class="max-w-4xl mx-auto px-5 text-center">
+
+      <!-- Decorative icon -->
+      <div class="flex justify-center mb-8">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center" style="background:rgba(74,127,165,0.2);" aria-hidden="true">
+          <svg class="w-8 h-8" style="color:#4a7fa5;" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"/>
+          </svg>
+        </div>
+      </div>
+
+      <h2 id="empatia-heading" class="section-title text-white mb-8">¿Cómo te sientes hoy?</h2>
+
+      <blockquote class="empathy-quote mb-8">
+        "A veces el peso que cargas no tiene nombre, pero eso no lo hace menos real. Aquí no tienes que explicarte perfectamente ni llegar &laquo;bien&raquo;. Solo tienes que dar el primer paso."
+      </blockquote>
+
+      <p class="text-blue-200 text-lg leading-relaxed max-w-2xl mx-auto mb-10">
+        Quizás llevas tiempo sintiendo que algo no está bien. Que la ansiedad, la tristeza o las relaciones difíciles se han vuelto demasiado. Estás en el lugar correcto. Juntos trabajamos para que vuelvas a encontrar tu equilibrio.
+      </p>
+
+      <!-- Emotional keywords -->
+      <div class="flex flex-wrap justify-center gap-3 mb-2" role="list" aria-label="Motivos de consulta frecuentes">
+        <span role="listitem" class="px-4 py-2 rounded-full text-sm font-medium text-blue-200" style="background:rgba(74,127,165,0.25);">Ansiedad</span>
+        <span role="listitem" class="px-4 py-2 rounded-full text-sm font-medium text-blue-200" style="background:rgba(74,127,165,0.25);">Depresión</span>
+        <span role="listitem" class="px-4 py-2 rounded-full text-sm font-medium text-blue-200" style="background:rgba(74,127,165,0.25);">Relaciones difíciles</span>
+        <span role="listitem" class="px-4 py-2 rounded-full text-sm font-medium text-blue-200" style="background:rgba(74,127,165,0.25);">Estrés laboral</span>
+        <span role="listitem" class="px-4 py-2 rounded-full text-sm font-medium text-blue-200" style="background:rgba(74,127,165,0.25);">Duelo y pérdida</span>
+        <span role="listitem" class="px-4 py-2 rounded-full text-sm font-medium text-blue-200" style="background:rgba(74,127,165,0.25);">Autoestima</span>
+        <span role="listitem" class="px-4 py-2 rounded-full text-sm font-medium text-blue-200" style="background:rgba(74,127,165,0.25);">Trauma</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave divider empathy → about -->
+  <div class="wave-divider" style="background:#1b2d4f;" aria-hidden="true">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,20 C480,60 960,0 1440,20 L1440,60 L0,60 Z" fill="#f8f4ee"/>
+    </svg>
+  </div>
+
+  <!-- ===================== ABOUT ME ===================== -->
+  <section id="sobre-mi" aria-labelledby="sobre-mi-heading">
+    <div class="max-w-6xl mx-auto px-5">
+
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+
+        <!-- Photo placeholder -->
+        <div class="flex justify-center md:justify-end">
+          <div class="about-photo-placeholder rounded-2xl w-64 h-80 sm:w-72 sm:h-96 flex flex-col items-center justify-center gap-3 shadow-lg" role="img" aria-label="Fotografía de la psicóloga">
+            <svg class="w-20 h-20 opacity-40" style="color:#1b2d4f;" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+            </svg>
+            <span class="text-sm opacity-50" style="color:#1b2d4f;">Tu foto aquí</span>
+          </div>
+        </div>
+
+        <!-- Bio -->
+        <div>
+          <span class="inline-block text-xs font-bold uppercase tracking-widest mb-4" style="color:#4a7fa5;">Sobre mí</span>
+          <h2 id="sobre-mi-heading" class="section-title text-left mb-2" style="display:block;">
+            Dra. Ana Sofía Méndez
+          </h2>
+          <p class="font-serif italic mb-6" style="color:#4a7fa5;">Psicóloga Clínica | Psicoterapeuta</p>
+
+          <p class="leading-relaxed mb-4" style="color:#3d4f66;">
+            Soy psicóloga clínica graduada de la <strong>Universidad Nacional Autónoma de México</strong> con maestría en Psicoterapia Humanista. Cuento con más de 8 años acompañando a personas en sus procesos de sanación, crecimiento personal y bienestar emocional.
+          </p>
+
+          <p class="leading-relaxed mb-6" style="color:#3d4f66;">
+            Mi enfoque integra técnicas cognitivo-conductuales, mindfulness y terapia narrativa, adaptadas siempre a las necesidades únicas de cada persona. Creo profundamente en que cada uno de nosotros tiene los recursos internos para sanar.
+          </p>
+
+          <!-- Credentials -->
+          <div class="space-y-3">
+            <div class="cedula-badge">
+              <svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+              </svg>
+              <span>Cédula Profesional: <strong class="text-white">12345678</strong></span>
+            </div>
+            <div class="cedula-badge">
+              <svg class="w-4 h-4 text-blue-300" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z"/>
+              </svg>
+              <span>Maestría en Psicoterapia Humanista — UNAM</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== SERVICES ===================== -->
+  <section id="servicios" aria-labelledby="servicios-heading">
+    <div class="max-w-6xl mx-auto px-5">
+
+      <div class="text-center mb-12">
+        <span class="inline-block text-xs font-bold uppercase tracking-widest mb-3" style="color:#4a7fa5;">Lo que ofrezco</span>
+        <h2 id="servicios-heading" class="section-title">Mis Servicios</h2>
+        <p class="mt-4 max-w-xl mx-auto" style="color:#5a6a80;">
+          Cada proceso terapéutico es único. Te ofrezco diferentes modalidades para que encuentres la que mejor se adapte a ti.
+        </p>
+      </div>
+
+      <!-- 3-column grid -->
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" role="list">
+
+        <!-- Card 1: Individual -->
+        <article class="service-card" role="listitem">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 12c2.7 0 4.8-2.1 4.8-4.8S14.7 2.4 12 2.4 7.2 4.5 7.2 7.2 9.3 12 12 12zm0 2.4c-3.2 0-9.6 1.6-9.6 4.8v2.4h19.2v-2.4c0-3.2-6.4-4.8-9.6-4.8z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold mb-3" style="color:#1b2d4f;">Terapia Individual</h3>
+          <p class="leading-relaxed mb-4" style="color:#5a6a80;">
+            Espacio confidencial y personalizado para explorar tus emociones, superar bloqueos y fortalecer tu bienestar mental.
+          </p>
+          <ul class="text-sm space-y-1 text-left" style="color:#4a7fa5;">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Sesiones de 50 minutos
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Presencial y en línea
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Enfoque personalizado
+            </li>
+          </ul>
+        </article>
+
+        <!-- Card 2: Couple -->
+        <article class="service-card" role="listitem">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold mb-3" style="color:#1b2d4f;">Terapia de Pareja</h3>
+          <p class="leading-relaxed mb-4" style="color:#5a6a80;">
+            Recupera la comunicación, la confianza y la conexión emocional con tu pareja a través de un proceso estructurado y empático.
+          </p>
+          <ul class="text-sm space-y-1 text-left" style="color:#4a7fa5;">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Gestión de conflictos
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Comunicación efectiva
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Reconstrucción del vínculo
+            </li>
+          </ul>
+        </article>
+
+        <!-- Card 3: Online -->
+        <article class="service-card sm:col-span-2 lg:col-span-1" role="listitem">
+          <div class="service-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm-2 12H6v-2h12v2zm0-3H6V9h12v2zm0-3H6V6h12v2z"/>
+            </svg>
+          </div>
+          <h3 class="font-serif text-xl font-bold mb-3" style="color:#1b2d4f;">Consulta en Línea</h3>
+          <p class="leading-relaxed mb-4" style="color:#5a6a80;">
+            Recibe apoyo psicológico profesional desde la comodidad de tu hogar, con la misma calidad que una sesión presencial.
+          </p>
+          <ul class="text-sm space-y-1 text-left" style="color:#4a7fa5;">
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Plataforma segura y privada
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Horarios flexibles
+            </li>
+            <li class="flex items-center gap-2">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
+                <path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/>
+              </svg>
+              Disponible en todo el país
+            </li>
+          </ul>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== CONTACT ===================== -->
+  <section id="contacto" aria-labelledby="contacto-heading">
+    <div class="max-w-3xl mx-auto px-5 text-center">
+
+      <div class="mb-8" aria-hidden="true">
+        <div class="w-16 h-16 rounded-full flex items-center justify-center mx-auto" style="background:rgba(74,127,165,0.25);">
+          <svg class="w-8 h-8 text-blue-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+              d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/>
+          </svg>
+        </div>
+      </div>
+
+      <h2 id="contacto-heading" class="font-serif text-3xl sm:text-4xl font-bold text-white mb-4">
+        ¿Listo para dar el primer paso?
+      </h2>
+
+      <p class="text-blue-200 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+        No tienes que enfrentar esto solo. Escríbeme hoy mismo y agendamos tu primera consulta <strong class="text-white">completamente gratis</strong>. Respondo en menos de 24 horas.
+      </p>
+
+      <!-- Main CTA -->
+      <a href="https://wa.me/5215500000000?text=Hola%20Dra.%20Ana%20Sof%C3%ADa%2C%20me%20gustar%C3%ADa%20agendar%20mi%20primera%20consulta%20gratuita"
+         target="_blank" rel="noopener noreferrer"
+         class="btn-whatsapp text-lg px-10 py-4 mb-6 inline-flex"
+         aria-label="Agendar primera consulta gratuita por WhatsApp">
+        <svg class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+          <path d="M12 0C5.373 0 0 5.373 0 12c0 2.123.558 4.135 1.535 5.88L0 24l6.273-1.505A11.946 11.946 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 21.818a9.797 9.797 0 01-5.032-1.387l-.36-.215-3.727.895.938-3.625-.235-.372A9.796 9.796 0 012.182 12C2.182 6.58 6.58 2.182 12 2.182S21.818 6.58 21.818 12 17.42 21.818 12 21.818z"/>
+        </svg>
+        Agendar mi consulta gratuita
+      </a>
+
+      <!-- Additional info -->
+      <div class="flex flex-col sm:flex-row justify-center gap-6 text-blue-300 text-sm mt-4">
+        <span class="flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/>
+          </svg>
+          Respuesta en menos de 24 h
+        </span>
+        <span class="flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/>
+          </svg>
+          Información 100% confidencial
+        </span>
+        <span class="flex items-center justify-center gap-2">
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"/>
+          </svg>
+          +52 155 0000 0000
+        </span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="py-8">
+    <div class="max-w-6xl mx-auto px-5">
+      <div class="flex flex-col md:flex-row items-center justify-between gap-4">
+        <p class="text-center md:text-left">
+          &copy; <span id="year"></span> Dra. Ana Sofía Méndez — Psicóloga Clínica. Todos los derechos reservados.
+        </p>
+        <nav aria-label="Pie de página">
+          <ul class="flex gap-5">
+            <li><a href="#hero">Inicio</a></li>
+            <li><a href="#sobre-mi">Sobre mí</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+      <p class="text-center mt-4 text-xs opacity-60">
+        Este sitio no sustituye atención médica de emergencia. Si estás en crisis, llama a la Línea de la Vida: <a href="tel:800-911-2000" class="underline">800 911 2000</a>.
+      </p>
+    </div>
+  </footer>
+
+  <!-- Scroll-to-top button -->
+  <button id="scroll-top" aria-label="Volver al inicio">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18"/>
+    </svg>
+  </button>
+
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    /* ---------- Year ---------- */
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    /* ---------- Hamburger menu ---------- */
+    const menuToggle = document.getElementById('menu-toggle');
+    const mobileMenu = document.getElementById('mobile-menu');
+    const iconOpen   = document.getElementById('icon-open');
+    const iconClose  = document.getElementById('icon-close');
+
+    menuToggle.addEventListener('click', function () {
+      const isOpen = !mobileMenu.classList.contains('hidden');
+      mobileMenu.classList.toggle('hidden');
+      iconOpen.classList.toggle('hidden');
+      iconClose.classList.toggle('hidden');
+      menuToggle.setAttribute('aria-expanded', String(!isOpen));
+    });
+
+    function closeMobileMenu() {
+      mobileMenu.classList.add('hidden');
+      iconOpen.classList.remove('hidden');
+      iconClose.classList.add('hidden');
+      menuToggle.setAttribute('aria-expanded', 'false');
+    }
+
+    /* ---------- Navbar scroll shadow ---------- */
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', function () {
+      navbar.classList.toggle('scrolled', window.scrollY > 20);
+    }, { passive: true });
+
+    /* ---------- Scroll-to-top button ---------- */
+    const scrollTopBtn = document.getElementById('scroll-top');
+    window.addEventListener('scroll', function () {
+      scrollTopBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    scrollTopBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
+</body>
+</html>
