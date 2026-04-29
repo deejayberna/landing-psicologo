@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Psicólogo Profesional | Dr. Juan Pérez</title>
+  <meta name="description" content="Atención psicológica profesional, empática y confidencial en CDMX. Agenda tu cita con el Dr. Juan Pérez.">
+  <meta name="keywords" content="psicólogo, terapia, CDMX, ansiedad, depresión, pareja, crecimiento personal, consulta, salud mental">
+  <meta name="author" content="Dr. Juan Pérez">
+  <link rel="icon" href="assets/favicon.ico" type="image/x-icon">
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+  <body class="bg-[#f8f9fa] text-[#1a2542] font-sans antialiased">
+
+  <!-- Header / Navbar -->
+  <header class="bg-white shadow fixed w-full z-20 top-0 left-0" role="banner">
+    <nav class="container mx-auto flex items-center justify-between p-4">
+      <span class="font-bold text-xl text-[#1a2542]" aria-label="Inicio">Dr. Juan Pérez</span>
+      <button id="menu-btn" class="md:hidden block focus:outline-none" aria-label="Abrir menú de navegación" aria-controls="mobile-menu" aria-expanded="false">
+        <svg class="w-7 h-7 text-[#1a2542]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+      </button>
+      <ul id="menu" class="hidden md:flex space-x-8 font-medium" role="menubar">
+        <li><a href="#inicio" class="hover:text-[#3b82f6]">Inicio</a></li>
+        <li><a href="#empatia" class="hover:text-[#3b82f6]">Empatía</a></li>
+        <li><a href="#sobre-mi" class="hover:text-[#3b82f6]">Sobre mí</a></li>
+        <li><a href="#servicios" class="hover:text-[#3b82f6]">Servicios</a></li>
+        <li><a href="#contacto" class="hover:text-[#3b82f6]">Contacto</a></li>
+      </ul>
+    </nav>
+    <!-- Menú móvil -->
+    <div id="mobile-menu" class="md:hidden hidden bg-white shadow" role="menu">
+      <ul class="flex flex-col space-y-2 p-4">
+        <li><a href="#inicio" class="block py-2">Inicio</a></li>
+        <li><a href="#empatia" class="block py-2">Empatía</a></li>
+        <li><a href="#sobre-mi" class="block py-2">Sobre mí</a></li>
+        <li><a href="#servicios" class="block py-2">Servicios</a></li>
+        <li><a href="#contacto" class="block py-2">Contacto</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="pt-24" id="main-content">
+
+    <!-- Hero -->
+    <section id="inicio" class="bg-[#1a2542] text-[#f8f9fa] py-16 px-4 flex flex-col items-center text-center" aria-label="Sección principal">
+      <h1 class="text-3xl md:text-5xl font-extrabold mb-4">Recupera tu bienestar emocional</h1>
+      <p class="text-lg md:text-2xl mb-6">Atención psicológica profesional, empática y confidencial en CDMX.</p>
+      <img src="assets/psicologo-placeholder.jpg" alt="Foto profesional del Dr. Juan Pérez, psicólogo" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover mx-auto mb-6 border-4 border-[#3b82f6] shadow-lg" loading="lazy">
+      <a href="https://wa.me/5215512345678" target="_blank" rel="noopener" class="inline-block bg-[#3b82f6] text-white px-8 py-3 rounded-full font-semibold text-lg shadow hover:bg-[#2563eb] transition" aria-label="Agendar cita por WhatsApp">
+        Agenda por WhatsApp
+      </a>
+    </section>
+
+    <!-- Empatía -->
+    <section id="empatia" class="container mx-auto py-12 px-4" aria-label="Empatía">
+      <div class="bg-white rounded-xl shadow p-8 max-w-2xl mx-auto">
+        <h2 class="text-2xl font-bold mb-4 text-[#1a2542]">¿Te sientes abrumado, ansioso o sin rumbo?</h2>
+        <p class="text-[#374151] text-lg">No estás solo. Muchas personas atraviesan momentos difíciles y pedir ayuda es un acto de valentía. Juntos podemos encontrar herramientas para que recuperes tu tranquilidad y confianza.</p>
+      </div>
+    </section>
+
+    <!-- Sobre Mí -->
+    <section id="sobre-mi" class="container mx-auto py-12 px-4 flex flex-col md:flex-row items-center md:space-x-8" aria-label="Sobre mí">
+      <img src="assets/psicologo-placeholder.jpg" alt="Foto profesional del Dr. Juan Pérez, psicólogo" class="w-32 h-32 md:w-48 md:h-48 rounded-full object-cover mb-6 md:mb-0 border-4 border-[#1a2542] shadow" loading="lazy">
+      <div>
+        <h2 class="text-2xl font-bold mb-2 text-[#1a2542]">Sobre mí</h2>
+        <p class="text-[#374151] mb-2">Soy el Dr. Juan Pérez, psicólogo titulado por la UNAM con más de 10 años de experiencia en terapia individual y de pareja. Mi enfoque es humano, empático y basado en evidencia científica.</p>
+        <p class="text-[#374151] mb-2">Cédula profesional: <span class="font-semibold">1234567</span></p>
+        <p class="text-[#374151]">Mi compromiso es acompañarte en tu proceso de sanación y crecimiento personal.</p>
+      </div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="container mx-auto py-12 px-4" aria-label="Servicios">
+      <h2 class="text-2xl font-bold mb-8 text-center text-[#1a2542]">Servicios</h2>
+      <div class="grid gap-8 md:grid-cols-3">
+        <!-- Tarjeta 1 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center" tabindex="0" aria-label="Terapia Individual">
+          <span class="text-4xl mb-4" aria-hidden="true">🧠</span>
+          <h3 class="font-semibold text-xl mb-2">Terapia Individual</h3>
+          <p class="text-[#374151]">Acompañamiento personalizado para ansiedad, depresión, autoestima y más.</p>
+        </div>
+        <!-- Tarjeta 2 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center" tabindex="0" aria-label="Terapia de Pareja">
+          <span class="text-4xl mb-4" aria-hidden="true">💬</span>
+          <h3 class="font-semibold text-xl mb-2">Terapia de Pareja</h3>
+          <p class="text-[#374151]">Mejora la comunicación, resuelve conflictos y fortalece tu relación.</p>
+        </div>
+        <!-- Tarjeta 3 -->
+        <div class="bg-white rounded-xl shadow p-6 flex flex-col items-center text-center" tabindex="0" aria-label="Crecimiento Personal">
+          <span class="text-4xl mb-4" aria-hidden="true">🌱</span>
+          <h3 class="font-semibold text-xl mb-2">Crecimiento Personal</h3>
+          <p class="text-[#374151]">Desarrolla habilidades para una vida plena y significativa.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="container mx-auto py-12 px-4 flex flex-col items-center" aria-label="Contacto">
+      <h2 class="text-2xl font-bold mb-4 text-[#1a2542]">Agenda tu cita</h2>
+      <p class="text-[#374151] mb-6 text-center">Haz clic en el botón para agendar tu sesión y dar el primer paso hacia tu bienestar.</p>
+      <a href="https://wa.me/5215512345678" target="_blank" rel="noopener" class="bg-[#3b82f6] text-white px-10 py-4 rounded-full font-semibold text-xl shadow hover:bg-[#2563eb] transition" aria-label="Agendar cita por WhatsApp">
+        Agendar por WhatsApp
+      </a>
+    </section>
+
+    <!-- Sección comercial para psicólogos -->
+    <section id="landing-psicologos" class="container mx-auto py-12 px-4 flex flex-col items-center bg-[#e6eaf3] rounded-xl mt-8" aria-label="Landing para psicólogos">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 text-[#1a2542] text-center">¿Eres psicólogo y quieres una landing profesional?</h2>
+      <p class="text-[#374151] mb-6 text-center max-w-2xl">Impulsa tu consulta privada con una página web moderna, optimizada y lista para captar pacientes. Personalizo el diseño, textos y fotos a tu perfil profesional. ¡Aumenta tu presencia y confianza en línea!</p>
+      <a href="https://wa.me/5215535818402?text=Quiero%20mi%20landing%20page%2C%20m%C3%A1s%20informaci%C3%B3n%20por%20favor." target="_blank" rel="noopener" class="bg-[#22c55e] text-white px-10 py-4 rounded-full font-semibold text-xl shadow hover:bg-[#16a34a] transition flex items-center gap-2" aria-label="Solicitar información para landing de psicólogo por WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-7 h-7" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M7.5 12h.008v.008H7.5V12zm4.5 0h.008v.008H12V12zm4.5 0h.008v.008H16.5V12zm-9.193 6.75A9 9 0 1121 12a9 9 0 01-13.693 6.75zm.693-2.25l-2.25.75.75-2.25" /></svg>
+        ¡Quiero mi landing page!
+      </a>
+      <p class="text-[#64748b] mt-4 text-sm">Responde por WhatsApp y recibe asesoría gratis, sin compromiso.</p>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-white text-[#1a2542] text-center py-6 mt-8 shadow-inner" role="contentinfo">
+    <p>&copy; 2026 Dr. Juan Pérez · Psicólogo Profesional · Todos los derechos reservados</p>
+  </footer>
+
+  <!-- Script menú hamburguesa -->
+  <script>
+    const menuBtn = document.getElementById('menu-btn');
+    const mobileMenu = document.getElementById('mobile-menu');
+    menuBtn.addEventListener('click', () => {
+      const expanded = menuBtn.getAttribute('aria-expanded') === 'true';
+      menuBtn.setAttribute('aria-expanded', !expanded);
+      mobileMenu.classList.toggle('hidden');
+    });
+  </script>
+</body>
+</html>
